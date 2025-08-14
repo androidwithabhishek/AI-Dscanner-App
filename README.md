@@ -20,11 +20,11 @@ It detects document edges, crops automatically, and enhances clarity — all dir
 
 | Capture | Process | Enhance |
 |---------|---------|---------|
-| !(screenshots/one.jpg) | ![](screenshots/two.png) | ![](screenshots/three.png) |
+| ![](screenshots/one.jpg) | ![](screenshots/second.jpg) | ![](screenshots/third.jpg) |
 
 | Save PDF | Document List | Settings |
 |----------|--------------|----------|
-| ![](screenshots/four.png) | ![](screenshots/five.png) | ![](screenshots/six.png) |
+| ![](screenshots/six.jpg) | ![](screenshots/five.jpg) | ![](screenshots/fourth.jpg) |
 
 ---
 
@@ -43,5 +43,6 @@ It detects document edges, crops automatically, and enhances clarity — all dir
 ```bash
 git clone https://github.com/your-username/document-scanner-mlkit.git
 cd document-scanner-mlkit
+
 
 
