@@ -78,8 +78,8 @@ class MainActivity : ComponentActivity() {
                         contract = ActivityResultContracts.StartIntentSenderForResult(),
                         onResult = {
                             if (it.resultCode == RESULT_OK) {
-                                val result =
-                                    GmsDocumentScanningResult.fromActivityResultIntent(it.data)
+                                val result = GmsDocumentScanningResult.fromActivityResultIntent(it.data)
+
 
                                 imageUris = result?.pages?.map { it.imageUri } ?: emptyList()
 
@@ -87,8 +87,10 @@ class MainActivity : ComponentActivity() {
                                 result?.pdf?.let { pdf ->
 
 
-                                    val downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                                    val file = File(downloadsDir, "scan_${System.currentTimeMillis()}.pdf")
+                                    val downloadsDir =
+                                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                                    val file =
+                                        File(downloadsDir, "scan_${System.currentTimeMillis()}.pdf")
 
                                     try {
                                         contentResolver.openInputStream(pdf.uri)?.use { input ->
@@ -96,9 +98,17 @@ class MainActivity : ComponentActivity() {
                                                 input.copyTo(output)
                                             }
                                         }
-                                        Toast.makeText(this, "PDF saved to Downloads", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(
+                                            this,
+                                            "PDF saved to Downloads",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
                                     } catch (e: Exception) {
-                                        Toast.makeText(this, "Error saving PDF: ${e.message}", Toast.LENGTH_LONG).show()
+                                        Toast.makeText(
+                                            this,
+                                            "Error saving PDF: ${e.message}",
+                                            Toast.LENGTH_LONG
+                                        ).show()
                                     }
 
 
