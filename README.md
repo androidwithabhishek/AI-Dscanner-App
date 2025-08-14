@@ -26,16 +26,9 @@ It detects document edges, crops automatically, and enhances clarity — all dir
 |----------|--------------|----------|
 | ![](screenshots/six.jpg) | ![](screenshots/five.jpg) | ![](screenshots/fourth.jpg) |
 
----
 
-## 🛠️ Tech Stack
 
-- **Language** – Kotlin
-- **Framework** – Android (Jetpack Compose / XML)
-- **ML Library** – [Google ML Kit](https://developers.google.com/ml-kit)
-- **Image Processing** – Built-in Android APIs + ML Kit
 
----
 
 ## 🚀 Getting Started
 
@@ -43,6 +36,7 @@ It detects document edges, crops automatically, and enhances clarity — all dir
 ```bash
 git clone https://github.com/your-username/document-scanner-mlkit.git
 cd document-scanner-mlkit
+
 
 
 
